@@ -2,6 +2,7 @@ var dictionary = [], i = 0;
 function addWord() {
     var word = document.getElementById("inputWord").value;
     dictionary[i] = word;
+    document.getElementById("inputWord").value = null;
     ++i;
 }
 
@@ -15,8 +16,9 @@ function searchWord() {
         }
     }
     if(flag == 1) {
-        document.getElementById("message").innerHTML = "<h4>This word does exists in dictionary.</h4>";
+        document.getElementById("message").innerHTML = "<h4>This word does exists in the dictionary.</h4>";
     } else {
-        document.getElementById("message").innerHTML = "<h4>This word doesn't exists in dictionary.</h4>";
+        document.getElementById("message").innerHTML = "<h4>This word doesn't exists in the dictionary.</h4>";
     }
+    document.getElementById("inputSearchText").value = null;
 }
